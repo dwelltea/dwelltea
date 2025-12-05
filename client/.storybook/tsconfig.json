@@ -1,0 +1,18 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "../ui-library/**/*",
+    "./**/*"
+  ],
+  "exclude": [
+    "../src",
+    "../node_modules",
+    "../.next"
+  ]
+}
+
+

@@ -1,0 +1,77 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- House outline with integrated 'd' - white color -->
+  <!-- Left side of house -->
+  <path 
+    d="M7 23 L7 28" 
+    stroke="#ffffff" 
+    stroke-width="2.2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none"
+  />
+  <!-- Bottom of house -->
+  <path 
+    d="M7 28 L25 28" 
+    stroke="#ffffff" 
+    stroke-width="2.2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none"
+  />
+  <!-- Roof - triangular top -->
+  <path 
+    d="M7 23 L16 12 L25 23" 
+    stroke="#ffffff" 
+    stroke-width="2.2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none"
+  />
+  <!-- Chimney - small rectangle on right side of roof -->
+  <path 
+    d="M21 19 L21 15 L23 15 L23 19" 
+    stroke="#ffffff" 
+    stroke-width="2.2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none"
+  />
+  <!-- Right side of house - this line + doorway forms the 'd' -->
+  <path 
+    d="M25 23 L25 28" 
+    stroke="#ffffff" 
+    stroke-width="2.2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none"
+  />
+  <!-- Arched doorway - left vertical -->
+  <path 
+    d="M19 28 L19 21" 
+    stroke="#ffffff" 
+    stroke-width="2.2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none"
+  />
+  <!-- Arched top of doorway - forms the curve of 'd' -->
+  <path 
+    d="M19 21 Q19 19 21 19 Q23 19 23 21" 
+    stroke="#ffffff" 
+    stroke-width="2.2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none"
+  />
+  <!-- Right vertical of doorway - connects to house right side, completing the 'd' -->
+  <path 
+    d="M23 21 L23 28" 
+    stroke="#ffffff" 
+    stroke-width="2.2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    fill="none"
+  />
+</svg>
+
+
