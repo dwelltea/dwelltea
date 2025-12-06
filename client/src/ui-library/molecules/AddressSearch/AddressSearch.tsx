@@ -9,6 +9,7 @@ export interface AddressSearchProps {
   placeholder?: string;
   disabled?: boolean;
   className?: string;
+  autoFocus?: boolean;
 }
 
 export const AddressSearch: React.FC<AddressSearchProps> = ({
@@ -18,6 +19,7 @@ export const AddressSearch: React.FC<AddressSearchProps> = ({
   placeholder = "Enter an address to get started.",
   disabled = false,
   className = '',
+  autoFocus = false,
 }) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -36,6 +38,7 @@ export const AddressSearch: React.FC<AddressSearchProps> = ({
           onChange={(e) => onChange(e.target.value)}
           fullWidth
           disabled={disabled}
+          autoFocus={autoFocus}
         />
       </InputWrapper>
       <SubmitButton type="submit" aria-label="Submit address" disabled={disabled}>

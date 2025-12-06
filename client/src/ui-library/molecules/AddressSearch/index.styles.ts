@@ -4,9 +4,16 @@ export const Form = styled.form`
   display: flex;
   gap: 12px;
   width: 100%;
+  max-width: 100%;
   
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    gap: 8px;
   }
 `;
 

@@ -9,6 +9,11 @@ export const Container = styled.div`
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 `;
 
 export const Grid = styled.div`
@@ -27,6 +32,12 @@ export const LeftContent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 100%;
+  max-width: 100%;
+  
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
 `;
 
 export const Heading = styled.h1`
@@ -37,6 +48,10 @@ export const Heading = styled.h1`
   
   @media (max-width: 768px) {
     font-size: 42px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 38px;
   }
 `;
 

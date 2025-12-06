@@ -144,7 +144,7 @@ export const CTAButtonContainer = styled.div`
 `;
 
 export const AddressDisplay = styled.h1`
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   color: #1a3d2e;
   margin: 0 0 16px 0;
@@ -181,6 +181,14 @@ export const ValueContent = styled.div`
   gap: 8px;
   flex: 1;
   min-width: 0;
+  
+  /* Reduce ValueDisplay font size on mobile */
+  @media (max-width: 768px) {
+    div {
+      font-size: 40px !important;
+      line-height: 1 !important;
+    }
+  }
 `;
 
 export const ConfidenceBarContainer = styled.div`

@@ -50,6 +50,7 @@ Real Estate.`}
               onChange={setAddress}
               onSubmit={handleSubmit}
               placeholder="Enter an address to get started."
+              autoFocus={true}
             />
           </LeftContent>
           <CoupleImage />
