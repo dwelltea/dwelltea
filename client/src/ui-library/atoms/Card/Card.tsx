@@ -10,7 +10,6 @@ export interface CardProps {
 const StyledCard = styled.div<{ $variant: 'default' | 'cream' }>`
   background-color: ${({ $variant }) => ($variant === 'cream' ? '#faf8f3' : '#ffffff')};
   border-radius: 12px;
-  padding: 24px;
   border: 1px solid #e5e7eb;
   
   @media (min-width: 768px) {

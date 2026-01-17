@@ -57,13 +57,9 @@ export function Navigation({ onSearchClick, onHomeClick }: NavigationProps) {
           <LogoLink onClick={handleLogoClick} href="#" aria-label="Home">
             <Logo variant="horizontal" size="medium" />
           </LogoLink>
-          <NavLinks>
-            <NavLink href="#" onClick={handleHomeClick}>Home</NavLink>
-            <NavLink href="#insights">Insights</NavLink>
-            <NavLink href="#about">About</NavLink>
-          </NavLinks>
         </NavLeft>
         <NavRight>
+          <NavLink href="#about">About</NavLink>
           <IconButton aria-label="Search" onClick={onSearchClick}>
             <Search size={20} />
           </IconButton>

@@ -9,5 +9,9 @@ export { TrendCard } from './TrendCard';
 export type { TrendCardProps, TrendDataPoint } from './TrendCard';
 export { Accordion } from './Accordion';
 export type { AccordionProps } from './Accordion';
+export { HighlightItem } from './HighlightItem';
+export type { HighlightItemProps } from './HighlightItem';
+export { AIInsightCard } from './AIInsightCard';
+export type { AIInsightCardProps } from './AIInsightCard';
 
 

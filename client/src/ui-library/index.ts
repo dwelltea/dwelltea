@@ -48,6 +48,12 @@ export type { TrendCardProps, TrendDataPoint } from './molecules/TrendCard';
 export { Accordion } from './molecules/Accordion';
 export type { AccordionProps } from './molecules/Accordion';
 
+export { HighlightItem } from './molecules/HighlightItem';
+export type { HighlightItemProps } from './molecules/HighlightItem';
+
+export { AIInsightCard } from './molecules/AIInsightCard';
+export type { AIInsightCardProps } from './molecules/AIInsightCard';
+
 // Theme
 export { default as theme } from './theme/theme';
 

@@ -50,7 +50,6 @@ export default function RootLayout({
               padding: 16px 0;
             }
             section {
-              background-color: #faf8f3;
               padding: 64px 0;
             }
             img {

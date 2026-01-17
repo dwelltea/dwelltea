@@ -204,4 +204,3 @@ export const MobileNavLinkIcon = styled.div`
   width: 20px;
   height: 20px;
 `;
-

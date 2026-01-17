@@ -208,12 +208,53 @@ export const AIInsightIcon = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-  color: #1a3d2e;
+  color: #c4941f;
   margin-top: 2px;
+  position: relative;
   
   svg {
     width: 36px;
     height: 36px;
+    filter: drop-shadow(0 0 6px rgba(196, 148, 31, 0.15)) drop-shadow(0 0 12px rgba(196, 148, 31, 0.1));
+    animation: glow 3s ease-in-out infinite alternate;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Additional glow layer using pseudo-element for background glow */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(196, 148, 31, 0.1) 0%, rgba(196, 148, 31, 0.05) 40%, transparent 70%);
+    animation: glowPulse 3s ease-in-out infinite alternate;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  @keyframes glow {
+    from {
+      filter: drop-shadow(0 0 6px rgba(196, 148, 31, 0.15)) drop-shadow(0 0 12px rgba(196, 148, 31, 0.1));
+    }
+    to {
+      filter: drop-shadow(0 0 10px rgba(196, 148, 31, 0.2)) drop-shadow(0 0 18px rgba(196, 148, 31, 0.15));
+    }
+  }
+  
+  @keyframes glowPulse {
+    from {
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+      opacity: 0.5;
+      transform: translate(-50%, -50%) scale(1.1);
+    }
   }
 `;
 

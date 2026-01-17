@@ -2,9 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { Lightbulb } from 'lucide-react';
 import { Navigation } from '../LandingPage/Navigation';
 import { FullPropertyBreakdown } from './FullPropertyBreakdown';
+import { AnimatedText } from '../LandingPage/HeroSection/AnimatedText';
 import { 
   Card, 
   ValueDisplay, 
@@ -42,11 +44,13 @@ interface ValuationPageProps {
 }
 
 export function ValuationPage({ address = '456 Lakewood Drive', onHomeClick, onSearchClick }: ValuationPageProps) {
-  const displayAddress = '456 Lakewood Drive';
+  const router = useRouter();
+  const displayAddress = address || '456 Lakewood Drive';
 
   const handleExploreInsights = () => {
-    // TODO: Navigate to community insights page
-    console.log('Explore Community Insights clicked');
+    // Navigate to community insights page with encoded address
+    const encodedAddress = encodeURIComponent(displayAddress);
+    router.push(`/community/${encodedAddress}`);
   };
 
   return (
@@ -98,7 +102,11 @@ export function ValuationPage({ address = '456 Lakewood Drive', onHomeClick, onS
                 <div style={{ flex: 1 }}>
                   <AIInsightTitle>AI Insight</AIInsightTitle>
                   <p style={{ fontSize: '16px', lineHeight: '1.5', color: '#374151', margin: 0 }}>
-                    The estimated value has remained stable amidst a balanced local market.
+                    <AnimatedText 
+                      text="The estimated value has remained stable amidst a balanced local market..." 
+                      delay={30} 
+                      startDelay={300} 
+                    />
                   </p>
                 </div>
               </div>
@@ -137,7 +145,7 @@ export function ValuationPage({ address = '456 Lakewood Drive', onHomeClick, onS
           </MetricsGrid>
 
           {/* Full Property Breakdown Accordion */}
-          <Accordion title="View Full Breakdown">
+          <Accordion title="View Full Breakdown" defaultOpen={true}>
             <FullPropertyBreakdown onExploreInsights={handleExploreInsights} />
           </Accordion>
         </Container>
