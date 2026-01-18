@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const IconWrapper = styled.div`
-  width: 24px;
+  width: 28px;
   flex-shrink: 0;
   display: flex;
   align-items: flex-start;
@@ -22,14 +22,16 @@ const IconWrapper = styled.div`
   padding-top: 2px;
   
   & > * {
-    color: #4b5563;
+    color: #c4941f;
+    width: 28px;
+    height: 28px;
   }
 `;
 
 const TextContent = styled.div`
   flex: 1;
   color: #374151;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
 `;
 

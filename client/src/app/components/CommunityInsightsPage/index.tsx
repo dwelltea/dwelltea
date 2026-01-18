@@ -77,19 +77,19 @@ export function CommunityInsightsPage({
               <SectionTitle>School Highlights</SectionTitle>
               <HighlightsList>
                 <Card>
-                  <HighlightItem icon={<GraduationCap size={20} />}>
+                  <HighlightItem icon={<GraduationCap size={28} />}>
                     <strong>Top-rated Schools (8.2/10)</strong>
                     <br />
                     Xavier High School (7.9/10)
                   </HighlightItem>
                 </Card>
                 <Card>
-                  <HighlightItem icon={<Sprout size={20} />}>
+                  <HighlightItem icon={<Sprout size={28} />}>
                     French Immersion, STEM
                   </HighlightItem>
                 </Card>
                 <Card>
-                  <HighlightItem icon={<Home size={20} />}>
+                  <HighlightItem icon={<Home size={28} />}>
                     Homes near top schools sell 4-7% above neighbourhood
                   </HighlightItem>
                 </Card>
@@ -100,17 +100,17 @@ export function CommunityInsightsPage({
               <SectionTitle>Development Activity</SectionTitle>
               <HighlightsList>
                 <Card>
-                  <HighlightItem icon={<Building size={20} />}>
+                  <HighlightItem icon={<Building size={28} />}>
                     Mixed-use plaza expansion on Tenth Line
                   </HighlightItem>
                 </Card>
                 <Card>
-                  <HighlightItem icon={<TrendingUp size={20} />}>
+                  <HighlightItem icon={<TrendingUp size={28} />}>
                     Zoning approvals increasing year-year
                   </HighlightItem>
                 </Card>
                 <Card>
-                  <HighlightItem icon={<ArrowUp size={20} />}>
+                  <HighlightItem icon={<ArrowUp size={28} />}>
                     Strong upward pressure expected over the 1-24 months
                   </HighlightItem>
                 </Card>

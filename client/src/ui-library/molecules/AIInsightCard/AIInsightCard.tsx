@@ -58,7 +58,7 @@ const AIInsightIcon = styled.div`
   svg {
     width: 36px;
     height: 36px;
-    filter: drop-shadow(0 0 6px rgba(196, 148, 31, 0.15)) drop-shadow(0 0 12px rgba(196, 148, 31, 0.1));
+    filter: drop-shadow(0 0 8px rgba(196, 148, 31, 0.25)) drop-shadow(0 0 16px rgba(196, 148, 31, 0.2));
     animation: glow 3s ease-in-out infinite alternate;
     position: relative;
     z-index: 1;
@@ -74,7 +74,7 @@ const AIInsightIcon = styled.div`
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(196, 148, 31, 0.1) 0%, rgba(196, 148, 31, 0.05) 40%, transparent 70%);
+    background: radial-gradient(circle, rgba(196, 148, 31, 0.2) 0%, rgba(196, 148, 31, 0.1) 40%, transparent 70%);
     animation: glowPulse 3s ease-in-out infinite alternate;
     z-index: 0;
     pointer-events: none;
@@ -82,20 +82,20 @@ const AIInsightIcon = styled.div`
   
   @keyframes glow {
     from {
-      filter: drop-shadow(0 0 6px rgba(196, 148, 31, 0.15)) drop-shadow(0 0 12px rgba(196, 148, 31, 0.1));
+      filter: drop-shadow(0 0 8px rgba(196, 148, 31, 0.25)) drop-shadow(0 0 16px rgba(196, 148, 31, 0.2));
     }
     to {
-      filter: drop-shadow(0 0 10px rgba(196, 148, 31, 0.2)) drop-shadow(0 0 18px rgba(196, 148, 31, 0.15));
+      filter: drop-shadow(0 0 12px rgba(196, 148, 31, 0.35)) drop-shadow(0 0 24px rgba(196, 148, 31, 0.25));
     }
   }
   
   @keyframes glowPulse {
     from {
-      opacity: 0.3;
+      opacity: 0.4;
       transform: translate(-50%, -50%) scale(0.9);
     }
     to {
-      opacity: 0.5;
+      opacity: 0.6;
       transform: translate(-50%, -50%) scale(1.1);
     }
   }
