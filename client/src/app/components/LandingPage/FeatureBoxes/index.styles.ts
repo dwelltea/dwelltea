@@ -48,6 +48,13 @@ export const Description = styled.p`
 export const StyledCard = styled(Card)`
   border: 1px solid #e5e7eb;
   background-color: #ffffff;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #faf8f3;
+    border-color: #c4941f;
+  }
 `;
 
 export const CardContent = styled.div`

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { CircleDollarSign, Lightbulb, MapPinned } from 'lucide-react';
 import {
   Section,
@@ -14,6 +15,8 @@ import {
 } from './index.styles';
 
 export function FeatureBoxes() {
+  const router = useRouter();
+
   const features = [
     {
       icon: (
@@ -23,6 +26,7 @@ export function FeatureBoxes() {
       ),
       title: 'Accurate Valuations',
       description: 'Instant estimates based on real-time data.',
+      onClick: undefined,
     },
     {
       icon: (
@@ -32,6 +36,9 @@ export function FeatureBoxes() {
       ),
       title: 'AI-Powered Insights',
       description: 'Understand factors influencing your home\'s worth.',
+      onClick: () => {
+        router.push('/value/any-address');
+      },
     },
     {
       icon: (
@@ -41,6 +48,9 @@ export function FeatureBoxes() {
       ),
       title: 'Neighbourhood Intelligence',
       description: 'Key information on what\'s happening nearby.',
+      onClick: () => {
+        router.push('/community/any-address');
+      },
     },
   ];
 
@@ -49,7 +59,11 @@ export function FeatureBoxes() {
       <Container>
         <Grid>
           {features.map((feature, index) => (
-            <StyledCard key={index} variant="default">
+            <StyledCard 
+              key={index} 
+              variant="default"
+              onClick={feature.onClick}
+            >
               <CardContent>
                 {feature.icon}
                 <Title>{feature.title}</Title>

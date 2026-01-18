@@ -5,6 +5,7 @@ export interface CardProps {
   children: React.ReactNode;
   variant?: 'default' | 'cream';
   className?: string;
+  onClick?: () => void;
 }
 
 const StyledCard = styled.div<{ $variant: 'default' | 'cream' }>`
@@ -18,9 +19,10 @@ export const Card: React.FC<CardProps> = ({
   children,
   variant = 'default',
   className = '',
+  onClick,
 }) => {
   return (
-    <StyledCard $variant={variant} className={className}>
+    <StyledCard $variant={variant} className={className} onClick={onClick}>
       {children}
     </StyledCard>
   );

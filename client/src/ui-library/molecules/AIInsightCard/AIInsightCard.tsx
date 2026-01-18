@@ -58,8 +58,8 @@ const AIInsightIcon = styled.div`
   svg {
     width: 36px;
     height: 36px;
-    filter: drop-shadow(0 0 8px rgba(196, 148, 31, 0.25)) drop-shadow(0 0 16px rgba(196, 148, 31, 0.2));
-    animation: glow 3s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 8px rgba(196, 148, 31, 0.2)) drop-shadow(0 0 16px rgba(196, 148, 31, 0.1));
+    animation: glow 1.5s ease-in-out infinite alternate;
     position: relative;
     z-index: 1;
   }
@@ -75,28 +75,28 @@ const AIInsightIcon = styled.div`
     height: 60px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(196, 148, 31, 0.2) 0%, rgba(196, 148, 31, 0.1) 40%, transparent 70%);
-    animation: glowPulse 3s ease-in-out infinite alternate;
+    animation: glowPulse 1.5s ease-in-out infinite alternate;
     z-index: 0;
     pointer-events: none;
   }
   
   @keyframes glow {
     from {
-      filter: drop-shadow(0 0 8px rgba(196, 148, 31, 0.25)) drop-shadow(0 0 16px rgba(196, 148, 31, 0.2));
+      filter: drop-shadow(0 0 8px rgba(196, 148, 31, 0.2)) drop-shadow(0 0 16px rgba(196, 148, 31, 0.1));
     }
     to {
-      filter: drop-shadow(0 0 12px rgba(196, 148, 31, 0.35)) drop-shadow(0 0 24px rgba(196, 148, 31, 0.25));
+      filter: drop-shadow(0 0 20px rgba(196, 148, 31, 0.4)) drop-shadow(0 0 40px rgba(196, 148, 31, 0.3));
     }
   }
   
   @keyframes glowPulse {
     from {
-      opacity: 0.4;
-      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0.3;
+      transform: translate(-50%, -50%) scale(0.85);
     }
     to {
-      opacity: 0.6;
-      transform: translate(-50%, -50%) scale(1.1);
+      opacity: 0.7;
+      transform: translate(-50%, -50%) scale(1.15);
     }
   }
 `;

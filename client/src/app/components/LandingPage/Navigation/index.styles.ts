@@ -204,3 +204,70 @@ export const MobileNavLinkIcon = styled.div`
   width: 20px;
   height: 20px;
 `;
+
+export const UserMenuContainer = styled.div`
+  position: relative;
+`;
+
+export const UserMenuDropdown = styled.div`
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  min-width: 200px;
+  z-index: 1000;
+  padding: 8px;
+`;
+
+export const UserMenuButton = styled.button`
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #1f2937;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background-color: #f3f4f6;
+  }
+`;
+
+export const GoogleSignInButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: #f9fafb;
+    border-color: #d1d5db;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  &:active {
+    background-color: #f3f4f6;
+  }
+`;
+
+export const GoogleIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+`;
