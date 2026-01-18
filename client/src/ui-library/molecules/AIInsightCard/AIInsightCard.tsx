@@ -33,8 +33,11 @@ const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding-left: 24px;
-  padding-top: 32px;
+  padding: 24px;
+  
+  @media (min-width: 768px) {
+    padding: 32px 0 0 24px;
+  }
 `;
 
 const HeaderRow = styled.div`

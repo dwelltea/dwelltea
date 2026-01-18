@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { Logo } from '@/ui-library/atoms/Logo';
-import { Search, User, Menu, X, House, Lightbulb, CircleQuestionMark } from 'lucide-react';
+import { Search, User, Menu, X, CircleQuestionMark } from 'lucide-react';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import {
   NavContainer,
   NavContent,
@@ -29,6 +30,7 @@ interface NavigationProps {
 
 export function Navigation({ onSearchClick, onHomeClick }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isDesktop = useMediaQuery('(min-width: 769px)');
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -59,7 +61,7 @@ export function Navigation({ onSearchClick, onHomeClick }: NavigationProps) {
           </LogoLink>
         </NavLeft>
         <NavRight>
-          <NavLink href="#about">About</NavLink>
+          {isDesktop && <NavLink href="#about">About</NavLink>}
           <IconButton aria-label="Search" onClick={onSearchClick}>
             <Search size={20} />
           </IconButton>
@@ -80,22 +82,6 @@ export function Navigation({ onSearchClick, onHomeClick }: NavigationProps) {
         <MobileMenuOverlay $isOpen={isMobileMenuOpen} onClick={toggleMobileMenu} />
         <MobileMenuContent $isOpen={isMobileMenuOpen}>
           <MobileNavLinks>
-            <MobileNavLink href="#" onClick={handleHomeClick}>
-              <MobileNavLinkContent>
-                <MobileNavLinkIcon>
-                  <House size={20} />
-                </MobileNavLinkIcon>
-                Home
-              </MobileNavLinkContent>
-            </MobileNavLink>
-            <MobileNavLink href="#insights" onClick={handleNavLinkClick}>
-              <MobileNavLinkContent>
-                <MobileNavLinkIcon>
-                  <Lightbulb size={20} />
-                </MobileNavLinkIcon>
-                Insights
-              </MobileNavLinkContent>
-            </MobileNavLink>
             <MobileNavLink href="#about" onClick={handleNavLinkClick}>
               <MobileNavLinkContent>
                 <MobileNavLinkIcon>
