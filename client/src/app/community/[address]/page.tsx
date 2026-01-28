@@ -1,7 +1,7 @@
 'use client';
 
-import { CommunityInsightsPage } from '@/app/components/CommunityInsightsPage';
 import { useRouter } from 'next/navigation';
+import { CommunityInsightsPage } from '@/views/community-insights-view';
 
 export default function CommunityPage({ params }: { params: { address: string } }) {
   const router = useRouter();

@@ -1,7 +1,7 @@
 'use client';
 
-import { ValuationPage } from '@/views/ValuationPage';
 import { useRouter } from 'next/navigation';
+import { ValuationPage } from '@/views/valuation-view';
 
 export default function ValuePage({ params }: { params: { address: string } }) {
   const router = useRouter();
