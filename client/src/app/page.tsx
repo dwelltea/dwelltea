@@ -2,8 +2,8 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { LandingPage } from './components/LandingPage';
-import { SearchPage } from './components/SearchPage';
+import { LandingPage } from '../views/landing-view';
+import { SearchPage } from '../views/search-view';
 
 function HomeContent() {
   const searchParams = useSearchParams();

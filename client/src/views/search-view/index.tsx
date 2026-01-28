@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Navigation } from '../LandingPage/Navigation';
-import { AddressSearch } from '@/ui-library/molecules/AddressSearch';
-import { CoupleImage } from '../shared/CoupleImage';
+import { Navigation } from '../landing-view/Navigation';
+import { AddressSearch } from '@/ui-kit/molecules/AddressSearch';
+import { CoupleImage } from '@/ui-kit';
 import {
   PageContainer,
   Section,

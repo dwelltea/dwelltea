@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Lightbulb } from 'lucide-react';
-import { AnimatedText } from '../../../app/components/LandingPage/HeroSection/AnimatedText';
+import { AnimatedText } from '../AnimatedText';
 
 export interface AIInsightCardProps {
   insightText: string;

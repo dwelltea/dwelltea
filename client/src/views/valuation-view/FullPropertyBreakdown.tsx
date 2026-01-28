@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { PropertyCard, Button } from '@/ui-library';
+import { PropertyCard, Button } from '@/ui-kit';
 import {
   BreakdownSection,
   BreakdownTitle,

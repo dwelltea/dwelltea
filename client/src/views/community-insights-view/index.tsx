@@ -8,8 +8,8 @@ import {
   StatCard, 
   TrendCard, 
   Button 
-} from '@/ui-library';
-import { Navigation } from '../LandingPage/Navigation';
+} from '@/ui-kit';
+import { Navigation } from '../landing-view/Navigation';
 import {
   GraduationCap,
   Sprout,

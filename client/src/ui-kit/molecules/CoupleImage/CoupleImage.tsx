@@ -87,4 +87,3 @@ export const CoupleImage = React.memo(() => {
 });
 
 CoupleImage.displayName = 'CoupleImage';
-

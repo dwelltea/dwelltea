@@ -4,9 +4,9 @@ import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Lightbulb } from 'lucide-react';
-import { Navigation } from '../LandingPage/Navigation';
+import { Navigation } from '../landing-view/Navigation';
 import { FullPropertyBreakdown } from './FullPropertyBreakdown';
-import { AnimatedText } from '../LandingPage/HeroSection/AnimatedText';
+import { AnimatedText } from '@/ui-kit';
 import { 
   Card, 
   ValueDisplay, 
@@ -15,7 +15,7 @@ import {
   StatCard,
   TrendCard,
   Accordion
-} from '@/ui-library';
+} from '@/ui-kit';
 import {
   PageContainer,
   Section,

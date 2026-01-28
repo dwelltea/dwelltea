@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Card } from '@/ui-library/atoms/Card';
+import { Card } from '@/ui-kit/atoms/Card';
 
 export const Section = styled.section`
   background-color: #faf8f3;

@@ -54,6 +54,11 @@ export type { HighlightItemProps } from './molecules/HighlightItem';
 export { AIInsightCard } from './molecules/AIInsightCard';
 export type { AIInsightCardProps } from './molecules/AIInsightCard';
 
+export { CoupleImage } from './molecules/CoupleImage';
+
+export { AnimatedText } from './molecules/AnimatedText';
+export type { AnimatedTextProps } from './molecules/AnimatedText';
+
 // Theme
 export { default as theme } from './theme/theme';
 

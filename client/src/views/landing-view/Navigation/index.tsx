@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Logo } from '@/ui-library/atoms/Logo';
+import { Logo } from '@/ui-kit/atoms/Logo';
 import { Search, User, Menu, X, CircleQuestionMark } from 'lucide-react';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import {

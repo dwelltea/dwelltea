@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { AddressSearch } from '@/ui-library/molecules/AddressSearch';
-import { CoupleImage } from '../../shared/CoupleImage';
-import { AnimatedText } from './AnimatedText';
+import { AddressSearch } from '@/ui-kit/molecules/AddressSearch';
+import { CoupleImage } from '@/ui-kit';
+import { AnimatedText } from '@/ui-kit';
 import {
   Section,
   Container,

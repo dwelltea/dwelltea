@@ -17,7 +17,7 @@ const Letter = styled.span<{ $isVisible: boolean }>`
   transition: opacity 0.3s ease;
 `;
 
-interface AnimatedTextProps {
+export interface AnimatedTextProps {
   text: string;
   delay?: number; // Delay between each letter (in ms)
   startDelay?: number; // Initial delay before animation starts (in ms)
@@ -95,4 +95,3 @@ export function AnimatedText({
     </TextContainer>
   );
 }
-

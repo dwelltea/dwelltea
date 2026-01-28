@@ -1,6 +1,6 @@
 'use client';
 
-import { ValuationPage } from '@/app/components/ValuationPage';
+import { ValuationPage } from '@/views/ValuationPage';
 import { useRouter } from 'next/navigation';
 
 export default function ValuePage({ params }: { params: { address: string } }) {
