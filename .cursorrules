@@ -1,0 +1,37 @@
+Project: Full-Stack Next.js Application
+
+Stack:
+- Next.js (App Router)
+- Node.js
+- MongoDB
+- AWS (Lambda, S3, CloudWatch where applicable)
+- TypeScript
+
+Frontend rules:
+- Use App Router conventions (server components by default)
+- Prefer server actions over API routes when possible
+- No class components
+- Use Tailwind CSS only (no inline styles)
+- Components must be accessible (ARIA when needed)
+- Avoid client components unless necessary
+- Keep components under ~300 lines
+
+Backend rules:
+- Prefer clear domain logic over framework magic
+- Validate inputs at boundaries (Zod or equivalent)
+- Handle errors explicitly; no silent failures
+- Avoid tight coupling between services
+- MongoDB schemas must be explicit and documented
+
+API & data:
+- APIs must be versionable and backward-safe
+- Avoid breaking changes
+- Be explicit about contracts and return shapes
+- Prefer pagination and limits by default
+
+General:
+- No unrelated file changes
+- No unused exports or dead code
+- Prefer named exports
+- Add tests for non-trivial logic
+- Assume code will be reviewed by another engineer

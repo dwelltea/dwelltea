@@ -1,0 +1,91 @@
+{
+  "valuation": {
+    "address": "124 server-down st",
+    "estimated_value": {
+      "weighted_estimate": 850000,
+      "median_adj_value": 855000,
+      "final_calculated_estimate": 852500,
+      "houski_estimate": 0,
+      "repliers_estimate": 0
+    },
+    "confidenceMin": 820000,
+    "confidenceMax": 885000,
+    "accuracy": "medium",
+    "aiInsight": "Demo data: server is unavailable. This is mock valuation data for 124 Server-Down St so you can still view the UI.",
+    "trendData": [
+      { "x": 0, "y": 800000 },
+      { "x": 1, "y": 815000 },
+      { "x": 2, "y": 825000 },
+      { "x": 3, "y": 835000 },
+      { "x": 4, "y": 842000 },
+      { "x": 5, "y": 852500 }
+    ],
+    "overallSimilarityScore": 85,
+    "marketTemperature": "neutral"
+  },
+  "property": {
+    "address": "124 Server-Down St",
+    "city": "Demo City",
+    "state": "Demo State",
+    "country": "USA",
+    "age": 18,
+    "condition": "4",
+    "adj_values": {},
+    "comparable_props": [],
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "squareFeet": 1800,
+    "yearBuilt": 2006,
+    "imageUrl": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&h=600&fit=crop"
+  },
+  "comparables": [
+    {
+      "address": "100 Server-Down St",
+      "city": "Demo City",
+      "state": "Demo State",
+      "country": "USA",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFeet": 1700,
+      "yearBuilt": 2004,
+      "latest_sale_price": { "price": 840000, "date": "2024-01-15T00:00:00.000Z" },
+      "adj_values": { "adj_latest_sale_price": 848000 },
+      "comparable_props": [],
+      "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop",
+      "similarity_score": 92,
+      "weight": 0.22
+    },
+    {
+      "address": "200 Server-Down St",
+      "city": "Demo City",
+      "state": "Demo State",
+      "country": "USA",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "squareFeet": 1950,
+      "yearBuilt": 2008,
+      "latest_sale_price": { "price": 865000, "date": "2024-02-01T00:00:00.000Z" },
+      "adj_values": { "adj_latest_sale_price": 856000 },
+      "comparable_props": [],
+      "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop",
+      "similarity_score": 88,
+      "weight": 0.2
+    },
+    {
+      "address": "300 Server-Down St",
+      "city": "Demo City",
+      "state": "Demo State",
+      "country": "USA",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "squareFeet": 1650,
+      "yearBuilt": 2002,
+      "latest_sale_price": { "price": 830000, "date": "2023-12-10T00:00:00.000Z" },
+      "adj_values": { "adj_latest_sale_price": 851000 },
+      "comparable_props": [],
+      "imageUrl": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=400&h=300&fit=crop",
+      "similarity_score": 90,
+      "weight": 0.21
+    }
+  ]
+}
