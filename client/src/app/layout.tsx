@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import StyledComponentsRegistry from './registry';
+import { ValuationProvider } from '@/context';
 
 export const metadata: Metadata = {
   title: "Dwelltea - Real Estate Insights",
@@ -61,7 +62,9 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning>
         <StyledComponentsRegistry>
-          {children}
+          <ValuationProvider>
+            {children}
+          </ValuationProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
