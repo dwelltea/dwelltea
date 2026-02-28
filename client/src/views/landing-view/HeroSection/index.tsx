@@ -19,13 +19,10 @@ export function HeroSection() {
   const router = useRouter();
 
   const handleSubmit = (value: string) => {
-    // Navigate to valuation page if "any address" is searched
-    if (value.toLowerCase().trim() === 'any address') {
-      router.push('/value/any-address');
-    } else {
-      // Handle other address submissions
-      console.log('Address submitted:', value);
-    }
+    const trimmed = value?.trim();
+    if (!trimmed) return;
+    const encoded = encodeURIComponent(trimmed);
+    router.push(`/value/${encoded}`);
   };
 
   return (

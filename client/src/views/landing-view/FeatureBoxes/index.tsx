@@ -37,7 +37,7 @@ export function FeatureBoxes() {
       title: 'AI-Powered Insights',
       description: 'Understand factors influencing your home\'s worth.',
       onClick: () => {
-        router.push('/value/any-address');
+        router.push('/value/123%20Maple%20St');
       },
     },
     {
