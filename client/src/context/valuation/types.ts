@@ -1,10 +1,3 @@
-export const dbConfig = {
-  MONGO_URL: "DT_MONGO_URL",
-  MONGO_USER: "DT_MONGO_USER",
-  MONGO_PASS: "DT_MONGO_PASS",
-  DB_NAME: "DT_DB_NAME",
-} as const;
-
 export interface AdjValues {
   adj_sqft?: number;
   adj_beds?: number;
@@ -23,12 +16,11 @@ export interface ComparableProp {
 
 export interface LatestSalePrice {
   price: number;
-  date: Date;
+  date: string;
 }
 
-/** Maps to dwelltea-valuation SaleHistoryRecord. */
 export interface SaleHistoryEntry {
-  saleDate: Date;
+  saleDate: string;
   salePrice: number;
   sourceProvider?: string;
   recordId?: string;
@@ -73,9 +65,7 @@ export interface PropertyDoc {
   repliersMlsNumber?: string;
   sourceProvider?: string;
   sourceRecordId?: string;
-  sourceLastRefreshed?: Date;
-  createdAt?: Date;
-  updatedAt?: Date;
+  sourceLastRefreshed?: string;
 }
 
 export interface EstimatedValue {
@@ -87,32 +77,32 @@ export interface EstimatedValue {
   fallback_anchor?: number;
   houski_estimate?: number;
   repliers_estimate?: number;
-  houski_timestamp?: Date;
-  repliers_timestamp?: Date;
+  houski_timestamp?: string;
+  repliers_timestamp?: string;
 }
 
 export type EstimateSourceFlag =
-  | "Dwelltea Exact Local Estimate"
-  | "Dwelltea Hybrid Estimate"
-  | "Dwelltea Fallback Estimate"
-  | "External Estimate"
-  | "No Estimate Available";
+  | 'Dwelltea Exact Local Estimate'
+  | 'Dwelltea Hybrid Estimate'
+  | 'Dwelltea Fallback Estimate'
+  | 'External Estimate'
+  | 'No Estimate Available';
 
-export type ValuationDataTier = "Exact local" | "Hybrid-supporting" | "Type profile fallback";
+export type ValuationDataTier = 'Exact local' | 'Hybrid-supporting' | 'Type profile fallback';
 
 export type ExternalFallbackPolicy =
-  | "Prefer External fallback"
-  | "Prefer Dwelltea fallback"
-  | "Reference only";
+  | 'Prefer External fallback'
+  | 'Prefer Dwelltea fallback'
+  | 'Reference only';
 
 export type ExternalEstimatePreference =
-  | "Average"
-  | "Repliers"
-  | "Houski"
-  | "Lower of available"
-  | "Higher of available";
+  | 'Average'
+  | 'Repliers'
+  | 'Houski'
+  | 'Lower of available'
+  | 'Higher of available';
 
-export type ConfidenceBand = "High" | "Good" | "Moderate" | "Low";
+export type ConfidenceBand = 'High' | 'Good' | 'Moderate' | 'Low';
 
 export interface CompResultEntry {
   address: string;
@@ -129,7 +119,7 @@ export interface CompResultEntry {
 
 export interface SelectedComparableEntry {
   address: string;
-  saleDate?: Date;
+  saleDate?: string;
   salePrice?: number;
   adjustedPrice?: number;
   similarityScore?: number;
@@ -143,7 +133,7 @@ export interface PropertyContextEntry {
   annualPropertyTax?: number;
   monthlyPropertyTax?: number;
   propertyTaxSource?: string;
-  latestSaleDate?: Date;
+  latestSaleDate?: string;
   latestSalePrice?: number;
   yearsSinceLastSale?: number;
   changeSinceLastSale?: number;
@@ -160,7 +150,7 @@ export interface SelectedExternalEstimateEntry {
   isAvailable?: boolean;
   selectedEstimate?: number;
   selectedSource?: string;
-  selectedTimestamp?: Date;
+  selectedTimestamp?: string;
   freshnessDays?: number;
   confidenceScore?: number;
   confidenceBand?: ConfidenceBand;
@@ -174,7 +164,7 @@ export interface TrendDataPoint {
 
 export interface ValuationDoc {
   address: string;
-  valuationDate?: Date;
+  valuationDate?: string;
   analysisWindowDays?: number;
   requestedCompCount?: number;
   minRequiredComps?: number;
@@ -192,20 +182,18 @@ export interface ValuationDoc {
   eligibleCompCount?: number;
   publicationFlag?: string;
   aiExplanationSeed?: string;
-  lastEngineRunAt?: Date;
+  lastEngineRunAt?: string;
   propertyContext?: PropertyContextEntry;
   selectedExternalEstimate?: SelectedExternalEstimateEntry;
   selectedComparables?: SelectedComparableEntry[];
   compResults?: CompResultEntry[];
   confidenceMin?: number;
   confidenceMax?: number;
-  accuracy?: "low" | "medium" | "high";
+  accuracy?: 'low' | 'medium' | 'high';
   aiInsight?: string;
   trendData?: TrendDataPoint[];
   overallSimilarityScore?: number;
   marketTemperature?: string;
-  createdAt?: Date;
-  updatedAt?: Date;
 }
 
 export interface ComparableWithProperty extends PropertyDoc {
@@ -217,9 +205,4 @@ export interface ValuationResponse {
   valuation: ValuationDoc;
   property: PropertyDoc;
   comparables: ComparableWithProperty[];
-}
-
-export interface ApiError {
-  error: string;
-  code?: string;
 }
