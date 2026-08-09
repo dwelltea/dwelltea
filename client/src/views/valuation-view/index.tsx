@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Lightbulb } from 'lucide-react';
-import { useValuation } from '@/context';
+import { useValuation } from '@/context/valuation/state';
 import { Navigation } from '../landing-view/Navigation';
 import { FullPropertyBreakdown } from './FullPropertyBreakdown';
 import { AnimatedText } from '@/ui-kit';
@@ -82,7 +82,10 @@ export function ValuationPage({
   const accuracy = valuation?.accuracy ?? 'medium';
   const aiInsight = valuation?.aiInsight ?? '';
   const trendData = valuation?.trendData ?? [];
-  const overallSimilarity = valuation?.overallSimilarityScore;
+  const overallSimilarity =
+    valuation?.overallSimilarityScore != null
+      ? Math.round(valuation.overallSimilarityScore)
+      : undefined;
   const marketTempRaw = valuation?.marketTemperature?.toLowerCase() ?? 'neutral';
   const marketTemp: 'hot' | 'warm' | 'cold' | 'neutral' =
     marketTempRaw === 'hot' ? 'hot' : marketTempRaw === 'cold' ? 'cold' : marketTempRaw === 'warm' ? 'warm' : 'neutral';

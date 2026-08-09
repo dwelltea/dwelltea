@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import StyledComponentsRegistry from './registry';
-import { ValuationProvider } from '@/context';
+import { ValuationProvider } from '@/context/valuation/state';
 
 export const metadata: Metadata = {
   title: "Dwelltea - Real Estate Insights",
