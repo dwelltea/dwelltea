@@ -1,0 +1,86 @@
+DWELLTEA — HOUSKI & REPLIERS SUBSCRIPTIONS
+==========================================
+
+1. WHY DWELLTEA NEEDS BOTH HOUSKI AND REPLIERS
+----------------------------------------------
+
+Dwelltea's valuation engine needs two different kinds of data. Neither provider covers both on its own.
+
+HOUSKI — Universal subject property data (Canada)
+  - Lookup almost any Canadian address and cache core Property fields: beds, baths, sqft, year built, geo, assessments, tax, listing/sale history, rent/sale AVMs.
+  - Works without MLS membership. Broad address coverage (~19M+ properties).
+  - Does not reliably replace sold-comp discovery for the comp engine (multiple recent sold neighbors with sale price + date in a time window).
+
+REPLIERS — MLS sold comps and listing market data
+  - Find and ingest sold comparables (comp discovery): geo search, sold listings, sale price/date, DOM, list price, property attributes.
+  - Powers the Dwelltea comp-based estimate (not fallback-only).
+  - Also provides a second external AVM (repliers_estimate) for the fallback path when local comps are insufficient.
+  - MLS-centric: strong for listed/recently sold inventory, not every Canadian address.
+
+Together:
+  - Houski  → subject Property doc for any address + enrichment (tax, history, Houski AVM).
+  - Repliers → comp pool + MLS-grade sold data + Repliers AVM.
+
+Without Houski: many addresses won't resolve or will lack assessment/tax/history fields.
+Without Repliers: comp-based Dwelltea valuation cannot run on real sold comp data at scale.
+
+
+2. WHAT WE NEED TO SUBSCRIBE TO HOUSKI
+--------------------------------------
+
+Signup
+  - Create account: https://www.houski.ca/signup
+  - Get API key from dashboard; start with /properties (and /avm if needed).
+
+Real estate license
+  - NOT required. Houski uses public/government/crowdsourced sources; no MLS or agent membership needed.
+
+Cost
+  - Pay-as-you-go with $99 USD/month minimum (individuals / small business under ~$2M annual revenue).
+  - If usage is below $99 in a month, you still pay $99.
+  - AVM requests are billed separately (documented as ~$5 per AVM call; counts toward the monthly minimum).
+  - Property data is usage-based (per field / per request; use price_quote=true to estimate before calling).
+  - Enterprise (over ~$2M revenue): annual contract — contact sales.
+
+Unsubscribe / cancel
+  - Cancel anytime; no long-term contract on the standard tier.
+  - Cancellation invoices accrued usage in the current cycle, or the $99 minimum, whichever is greater (not prorated).
+
+Coverage
+  - Canada only. Not suitable for US addresses (e.g. current Seattle mock data).
+
+
+3. WHAT WE NEED TO SUBSCRIBE TO REPLIERS
+---------------------------------------
+
+Signup
+  - Request API key / create account: https://repliers.com
+  - Free sandbox with sample data for prototyping (no credit card).
+  - Upgrade to paid plan for real MLS data.
+
+Real estate license / MLS access
+  - Production data requires MLS authorization. Repliers cannot grant MLS access on its own.
+  - Two paths:
+      (A) MLS participant — licensed agent/brokerage with active MLS membership; broker of record typically must sign the data agreement. Scoped to that participant's approved use (not a generic public product for arbitrary consumers without MLS scope approval).
+      (B) Technology vendor — proptech building for MLS participants; separate vendor license per MLS, usually requires a member endorsement; product must align with approved MLS scope (consumer-facing Dwelltea needs explicit MLS approval of use case and display rules).
+  - Sold comp data requires sold-data rights in the MLS license (not automatic).
+  - Each Canadian market/MLS is typically a separate license.
+
+Cost
+  - Sandbox: $0 (sample data).
+  - Paid platform tiers (approx.): $199 / $299 / $399 USD per month depending on plan; annual billing discounts available.
+  - Plus MLS/board fees and agreements (varies by market).
+  - Month-to-month from Repliers; no setup fee from Repliers.
+
+Unsubscribe / cancel
+  - Repliers service is billed month-to-month with no long-term contract; cancel anytime.
+  - MLS data agreements may have separate terms from the board — review per license.
+
+Timeline
+  - Sandbox: same day.
+  - Production real data: often weeks to months (MLS application, broker/vendor approval, per-market licensing).
+
+Recommended approach for Dwelltea
+  - Houski first for subject caching and fallback AVM (low friction).
+  - Repliers sandbox in parallel to build comp-discovery integration.
+  - Before Repliers production: decide MLS strategy (brokerage partner vs vendor path) and target market(s).

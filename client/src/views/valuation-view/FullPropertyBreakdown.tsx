@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { PropertyCard, Button } from '@/ui-kit';
-import { useValuation } from '@/context';
+import { useValuation } from '@/context/valuation/state';
 import {
   BreakdownSection,
   BreakdownTitle,

@@ -1,2 +1,2 @@
-export { Property } from "./property.model";
-export { Valuation } from "./valuation.model";
+export { Property } from "./property";
+export { Valuation } from "./valuation";
