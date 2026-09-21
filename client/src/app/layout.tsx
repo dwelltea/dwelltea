@@ -5,7 +5,7 @@ import { ValuationProvider } from '@/context/valuation/state';
 
 export const metadata: Metadata = {
   title: "Dwelltea - Real Estate Insights",
-  description: "Find your property's true value and understand what really drives it.",
+  description: "Understand your housing options, and move forward with greater clarity.",
 };
 
 export default function RootLayout({

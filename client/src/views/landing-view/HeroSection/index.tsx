@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { AddressSearch } from '@/ui-kit/molecules/AddressSearch';
-import { CoupleImage } from '@/ui-kit';
 import { AnimatedText } from '@/ui-kit';
+import { LivingVisual } from './LivingVisual';
 import {
   Section,
   Container,
@@ -32,7 +32,7 @@ export function HeroSection() {
           <LeftContent>
             <Heading>
               <AnimatedText 
-                text={`Real Connections.
+                text={`Real Pathways.
 Real Insights.
 Real Estate.`}
                 delay={50}
@@ -40,7 +40,7 @@ Real Estate.`}
               />
             </Heading>
             <Description>
-              Find your property's true value and understand what really drives it.
+            Understand your housing options, and move forward with greater clarity.
             </Description>
             <AddressSearch
               value={address}
@@ -50,7 +50,7 @@ Real Estate.`}
               autoFocus={true}
             />
           </LeftContent>
-          <CoupleImage />
+          <LivingVisual />
         </Grid>
       </Container>
     </Section>

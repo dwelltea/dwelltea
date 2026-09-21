@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server/index.js",
-    "dev": "nodemon --exec ts-node src/server/index.ts",
+    "start": "node api.js && node dist/server/index.js",
+    "dev": "node api.js && nodemon --exec ts-node src/server/index.ts",
     "seed": "ts-node src/scripts/seed-123-maple.ts",
     "clear:123-maple": "ts-node src/scripts/clear-123-maple.ts",
     "test": "jest"

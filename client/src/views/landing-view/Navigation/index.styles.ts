@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const NavContainer = styled.header`
   width: 100%;
-  background-color: #ffffff;
+  background-color: #faf8f3;
   border-bottom: 1px solid #e5e7eb;
   padding: 16px 0;
   position: relative;

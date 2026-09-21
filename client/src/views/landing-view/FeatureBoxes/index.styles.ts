@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Card } from '@/ui-kit/atoms/Card';
 
 export const Section = styled.section`
-  background-color: #faf8f3;
+  background-color: #ffffff;
   padding: 64px 0;
 `;
 
@@ -46,9 +46,11 @@ export const Description = styled.p`
 `;
 
 export const StyledCard = styled(Card)`
-  border: 1px solid #e5e7eb;
+  && {
+    border: 1px solid #ead6a8;
+  }
   background-color: #ffffff;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
   
   &:hover {
