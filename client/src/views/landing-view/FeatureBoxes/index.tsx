@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { CircleDollarSign, Lightbulb, MapPinned } from 'lucide-react';
+import { CircleDollarSign, Lightbulb, Handshake } from 'lucide-react';
 import {
   Section,
   Container,
@@ -43,11 +43,11 @@ export function FeatureBoxes() {
     {
       icon: (
         <IconContainer>
-          <MapPinned size={40} style={{ color: '#c4941f' }} />
+          <Handshake size={40} style={{ color: '#c4941f' }} />
         </IconContainer>
       ),
-      title: 'Neighbourhood Intelligence',
-      description: 'Key information on what\'s happening nearby.',
+      title: 'Connect with Professionals',
+      description: 'Get guidance from trusted local experts when you\'re ready.',
       onClick: () => {
         router.push('/community/any-address');
       },
