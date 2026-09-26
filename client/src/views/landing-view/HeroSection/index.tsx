@@ -33,7 +33,7 @@ export function HeroSection() {
             <Heading>
               <AnimatedText 
                 text={`Real Pathways.
-Real Insights.
+Real Solutions.
 Real Estate.`}
                 delay={50}
                 startDelay={200}

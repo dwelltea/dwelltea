@@ -110,7 +110,7 @@ export default function App() {
                 />
                 <FeatureCard
                   icon={<DollarSign size={40} />}
-                  title="Accurate Valuations"
+                  title="Accurate Comparisons"
                   description="Precise property valuations based on comprehensive market data and analysis."
                 />
                 <FeatureCard
